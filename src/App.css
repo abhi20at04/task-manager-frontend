@@ -1,0 +1,57 @@
+input {
+    width:100%;
+}
+
+.kg-row{
+    margin: 17px 1px;
+}
+.kg-button{
+    min-width:80px;
+}
+
+.todo-card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-gradient {
+  background: linear-gradient(to right, #8b5cf6, #a78bfa);
+  color: white;
+}
+
+.add-card {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+}
+
+.btn-add {
+  background-color: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #059669;
+  border-color: #059669;
+  color: white;
+}
+
+.task-item {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
