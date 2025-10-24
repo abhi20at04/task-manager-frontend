@@ -17,7 +17,7 @@ function TodoApp() {
   React.useEffect(() => {
     if (!token) return;
     import('axios').then(axios => {
-      axios.default.get("http://localhost:5000/api/todos", {
+      axios.default.get("https://taskmanager-backend-dlz9.onrender.com/api/todos", {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then((res) => settodoItems(res.data))
@@ -32,12 +32,12 @@ function TodoApp() {
   const handleNewItem = (itemName, itemDueDate) => {
     import('axios').then(axios => {
       axios.default.post(
-        "http://localhost:5000/api/todos",
+        "https://taskmanager-backend-dlz9.onrender.com/api/todos",
         { name: itemName, dueDate: itemDueDate },
         { headers: { Authorization: `Bearer ${token}` } }
       )
       .then(() =>
-        axios.default.get("http://localhost:5000/api/todos", {
+        axios.default.get("https://taskmanager-backend-dlz9.onrender.com/api/todos", {
           headers: { Authorization: `Bearer ${token}` }
         })
       )
@@ -48,10 +48,10 @@ function TodoApp() {
 
   const handleDeleteItem = (todoId) => {
   import('axios').then(axios => {
-    axios.default.delete(`http://localhost:5000/api/todos/${todoId}`, {
+    axios.default.delete(`https://taskmanager-backend-dlz9.onrender.com/api/todos/${todoId}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
-    .then(() => axios.default.get("http://localhost:5000/api/todos", {
+    .then(() => axios.default.get("https://taskmanager-backend-dlz9.onrender.com/api/todos", {
       headers: { Authorization: `Bearer ${token}` }
     }))
     .then((res) => settodoItems(res.data))
