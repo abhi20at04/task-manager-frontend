@@ -9,7 +9,7 @@ const TodoList = () => {
   useEffect(() => {
     if (!token) return;
 
-    axios.get('http://localhost:5000/api/todos', {
+    axios.get('https://taskmanager-backend-dlz9.onrender.com/api/todos', {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then(res => setTodos(res.data))

@@ -12,7 +12,7 @@ export default function Signup({ setShowSignup }) {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post("https://taskmanager-backend-dlz9.onrender.com", { email, password });
+      const res = await axios.post("https://taskmanager-backend-dlz9.onrender.com/api/auth/signup", { email, password });
       saveToken(res.data.token);
     } catch (err) {
       setError('Registration failed. Try another email.');
